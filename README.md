@@ -1,7 +1,7 @@
 # AltWorld
 
 ## Introduction
-A Clone of UI 
+A Clone of UI https://files.altworld.in/assignment/AssignmentScreen.png
   
 ## Project Type
 Frontend 
@@ -28,12 +28,23 @@ npm install
 npm run dev
 ```
 
-## Usage
-![Screenshot 2024-05-03 231233](https://github.com/Yawer091/AltWorld/assets/151438698/34a042ac-639a-4efc-87d8-5eff40b9ad9a)
+## ScreenShots
+
+### sidebar
 ![Screenshot 2024-05-03 231219](https://github.com/Yawer091/AltWorld/assets/151438698/81ed74f9-9d08-4b2b-9467-566dae0d9f57)
+
+### ProgressCard
 ![Screenshot 2024-05-03 231204](https://github.com/Yawer091/AltWorld/assets/151438698/b2ffba0a-9465-4586-8acc-663aa3794110)
-![Screenshot 2024-05-03 231300](https://github.com/Yawer091/AltWorld/assets/151438698/2a41dbcd-972e-48a8-a539-e232c0c43d2d)
+
+### DetailsCard
 ![Screenshot 2024-05-03 231249](https://github.com/Yawer091/AltWorld/assets/151438698/2d3cf3c6-03fb-4a0a-b8dc-17278a14bbfb)
+
+### VideoCard
+![Screenshot 2024-05-03 231233](https://github.com/Yawer091/AltWorld/assets/151438698/34a042ac-639a-4efc-87d8-5eff40b9ad9a)
+
+### FullScreen
+![Screenshot 2024-05-03 231300](https://github.com/Yawer091/AltWorld/assets/151438698/2a41dbcd-972e-48a8-a539-e232c0c43d2d)
+
 
 
 

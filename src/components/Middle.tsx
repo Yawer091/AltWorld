@@ -49,7 +49,7 @@ const Middle = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <div className="w-full md:w-[35%] mb-[12px] px-[10px] py-[4px] bg-white rounded-[20px]">
+    <div className="w-[38%] mb-[12px] px-[10px] py-[4px] bg-white rounded-[20px]  ">
       <div className="px-[10px]">
         <div className="flex flex-col md:flex-row justify-between items-center my-[10px]">
           <h2 className="text-[26px] font-bold mb-2 md:mb-0">Sales BDE</h2>
@@ -138,7 +138,7 @@ interface BakeType {
   progress: number;
 }
 
-function Bake(props: BakeType) {
+export function Bake(props: BakeType) {
   const [currentProgress, setCurrentProgress] = useState(0);
 
   useEffect(() => {
@@ -180,5 +180,6 @@ function Bake(props: BakeType) {
     </div>
   );
 }
+// export  Bake ;
 
 export default Middle;

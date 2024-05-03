@@ -10,10 +10,11 @@ interface PropsType {
 //   "https://avatars.mds.yandex.net/i?id=138099e213f33ee9323833ed658d92f1214cf496-10289922-images-thumbs&n=13",
 //   "https://avatars.mds.yandex.net/i?id=95ed82b5bd3707ad06da19b6a156ed53e40f643c-10093836-images-thumbs&n=13",
 // ];
+
 const Vcard = (props: PropsType) => {
   return (
     <>
-      <section className="flex w-[60%] bg-white rounded-md ">
+      <section className="flex w-[50%] bg-white rounded-md ">
         <article className=" w-[55%]">
           <div>
             <div className="flex justify-between items-center p-[10px]">
@@ -56,7 +57,6 @@ const Vcard = (props: PropsType) => {
             </button>
           </div>
         </article>
-        <article className=" w-[45%]"></article>
       </section>
     </>
   );

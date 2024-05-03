@@ -1,4 +1,5 @@
 import "./App.css";
+import Last from "./components/Last";
 import Modal from "./components/Modal";
 import Sidebar from "./components/Side";
 
@@ -24,10 +25,13 @@ import Sidebar from "./components/Side";
 // ];
 function App() {
   return (
-    <div className="flex mt-[10px] ml-[30px] ">
-      <Sidebar />
-      <Modal />
-    </div>
+    <>
+      <div className="flex mt-[10px] ml-[30px]  h-[900px]">
+        <Sidebar />
+        <Modal />
+      </div>
+      {/* <Last /> */}
+    </>
   );
 }
 

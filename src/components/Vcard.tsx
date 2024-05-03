@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Topv from "./Topv";
-import Mx from "./Mx";
+// import Mx from "./Mx";
 
 interface PropsType {
   data: { name: string; des: string }[];

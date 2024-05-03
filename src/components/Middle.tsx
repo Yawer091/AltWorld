@@ -121,3 +121,101 @@ function Bake(props: BakeType) {
     </div>
   );
 }
+// import imgas from "../assets/imgas.jpg";
+// import { useState, useRef } from "react";
+
+// export default function Mx() {
+//   const [index, setIndex] = useState(0);
+//   const vidRef = useRef(null);
+//   const [isPlay, setIsPlay] = useState(false);
+//   const [thumbnail, setThumbnail] = useState(imgas);
+
+//   const myVid = [
+//     "https://personate-data-v2.s3.amazonaws.com/website+data+/website_videos+/home_page_video.mp4",
+//     "https://personate-data-v2.s3.amazonaws.com/website+data+/language_video/9824591c-8cc3-4528-a408-9abe32866a54.mp4",
+//   ];
+
+//   const handlePrev = () => {
+//     setIsPlay(false);
+//     if (index === 0) {
+//       setIndex(myVid.length - 1);
+//     } else {
+//       setIndex(index - 1);
+//     }
+//     handlePlay();
+//   };
+
+//   const handleNext = () => {
+//     setIsPlay(false);
+//     if (index === myVid.length - 1) {
+//       setIndex(0);
+//     } else {
+//       setIndex(index + 1);
+//     }
+//     handlePlay();
+//   };
+
+//   const handlePlay = () => {
+//     if (vidRef.current) {
+//       if (vidRef.current.paused) {
+//         vidRef.current.play();
+//         setIsPlay(true);
+//       } else {
+//         vidRef.current.pause();
+//         setIsPlay(false);
+//         captureThumbnail();
+//       }
+//     }
+//   };
+
+//   const captureThumbnail = () => {
+//     if (vidRef.current) {
+//       const canvas = document.createElement("canvas");
+//       canvas.width = vidRef.current.videoWidth;
+//       canvas.height = vidRef.current.videoHeight;
+//       const ctx = canvas.getContext("2d");
+//       ctx.drawImage(vidRef.current, 0, 0, canvas.width, canvas.height);
+//       const dataURL = canvas.toDataURL();
+//       setThumbnail(dataURL);
+//     }
+//   };
+
+//   return (
+//     <div className="flex flex-col items-center justify-center">
+//       <div className="w-full md:w-3/4 lg:w-2/3 relative">
+//         <video
+//           ref={vidRef}
+//           className="w-full h-full"
+//           src={myVid[index]}
+//         ></video>
+//         {!isPlay && thumbnail && (
+//           <img
+//             src={imgas}
+//             alt="Thumbnail"
+//             className="absolute inset-0 object-cover w-full h-full"
+//           />
+//         )}
+//         <button
+//           onClick={handlePlay}
+//           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white px-4 py-2 rounded-lg shadow-md"
+//         >
+//           {isPlay ? "Pause" : "Play"}
+//         </button>
+//       </div>
+//       <div className="mt-4 flex gap-4">
+//         <button
+//           onClick={handlePrev}
+//           className="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md"
+//         >
+//           Prev
+//         </button>
+//         <button
+//           onClick={handleNext}
+//           className="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md"
+//         >
+//           Next
+//         </button>
+//       </div>
+//     </div>
+//   );
+// }

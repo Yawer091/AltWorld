@@ -40,11 +40,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div
-      className={`w-full md:w-[22%] ml-[20px] my-[20px] ${
-        isSidebarOpen ? "md:ml-[20px]" : "md:ml-0"
-      }`}
-    >
+    <div className={`w-full md:w-[22%] ml-[20px] my-[20px] md:ml-0`}>
       <button
         className="md:hidden fixed top-4 left-4 bg-white p-2 rounded-full flex items-center justify-center"
         onClick={toggleSidebar}

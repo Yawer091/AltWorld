@@ -2,22 +2,7 @@ import { useState, useRef } from "react";
 import { FaPlay } from "react-icons/fa";
 import { AiOutlineDoubleRight, AiOutlineDoubleLeft } from "react-icons/ai";
 import Vcard from "./Vcard";
-// import imgas from "../assets/imgas.jpg";
-
-// interface UserDataType {
-//   name: string;
-//   email: string;
-//   score: number;
-//   behavioural: number;
-//   communication: number;
-//   situation_handling: number;
-//   about: string;
-//   experience: string;
-//   hobbies: string;
-//   introduction: string;
-// }
-
-const Last = () => {
+const VideoCarousel = () => {
   const [index, setIndex] = useState(0);
   const vidRef = useRef<HTMLVideoElement>(null);
   const [isPlay, setIsPlay] = useState(false);
@@ -81,7 +66,7 @@ const Last = () => {
       des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, officia inventore repudiandae ",
     },
   ];
-  // const Last = () => {
+
   return (
     <div className="flex  bg-white w-[50%]">
       <Vcard data={data} />
@@ -130,4 +115,4 @@ const Last = () => {
   );
 };
 
-export default Last;
+export default VideoCarousel;

@@ -3,20 +3,7 @@ import { FaPlay } from "react-icons/fa";
 import { AiOutlineDoubleRight, AiOutlineDoubleLeft } from "react-icons/ai";
 import imgas from "../assets/imgas.jpg";
 import Topv from "./Topv";
-import { Bake } from "./Middle";
-
-// interface UserDataType {
-//   name: string;
-//   email: string;
-//   score: number;
-//   behavioural: number;
-//   communication: number;
-//   situation_handling: number;
-//   about: string;
-//   experience: string;
-//   hobbies: string;
-//   introduction: string;
-// }
+import { Bake } from "./Report";
 
 const SingleUser = () => {
   const [index, setIndex] = useState(0);
@@ -64,6 +51,7 @@ const SingleUser = () => {
       }
     }
   };
+
   const data = [
     {
       image: imgas,
@@ -72,6 +60,7 @@ const SingleUser = () => {
       progress: 78,
     },
   ];
+
   return (
     <div className="w-full bg-white shadow-lg rounded-xl flex flex-col md:flex-row gap-4">
       <div className="md:w-1/2 flex flex-col">
@@ -135,7 +124,7 @@ const SingleUser = () => {
             <button
               title="play"
               onClick={handlePlay}
-              className="flex items-center z-50 justify-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full absolute inset-0 text-primary bg-white text-[19px] h-[50px] w-[50px]"
+              className="flex items-center p-[10px] z-50 justify-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full absolute inset-0 text-primary bg-white text-[19px] h-[50px] w-[50px]"
             >
               <FaPlay />
             </button>

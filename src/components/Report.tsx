@@ -45,11 +45,11 @@ const data = [
   },
 ];
 
-const Middle = () => {
+const Report = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <div className="w-[38%] mb-[12px] px-[10px] py-[4px] bg-white rounded-[20px]  ">
+    <div className="w-full md:w-[38%] mb-[12px] px-[10px] py-[4px] bg-white rounded-[20px]">
       <div className="px-[10px]">
         <div className="flex flex-col md:flex-row justify-between items-center my-[10px]">
           <h2 className="text-[26px] font-bold mb-2 md:mb-0">Sales BDE</h2>
@@ -66,17 +66,17 @@ const Middle = () => {
           </div>
         </div>
         <div className="my-2 md:my-0">
-          <div className="flex justify-between  my-[5px]">
+          <div className="flex justify-between my-[5px]">
             <p>Assignment Link</p>
             <a href="#" className="text-blue-600 underline font-semibold">
               https://tiny.url/asknandna
             </a>
           </div>
-          <div className="flex justify-between ">
+          <div className="flex justify-between">
             <p>Assignment Hour</p>
             <p>3 hours</p>
           </div>
-          <div className="flex justify-between  my-[5px]">
+          <div className="flex justify-between my-[5px]">
             <p>Assignment Ends at</p>
             <p>11 March 2024</p>
           </div>
@@ -90,7 +90,7 @@ const Middle = () => {
           🗃️ To Review
         </Button>
         <Button
-          className="bg-none p-[10px] rounded-[10px] font-semibold  hover:shadow-md"
+          className="bg-none p-[10px] rounded-[10px] font-semibold hover:shadow-md"
           onClick={onOpen}
         >
           📁 Shortlisted
@@ -180,6 +180,5 @@ export function Bake(props: BakeType) {
     </div>
   );
 }
-// export  Bake ;
 
-export default Middle;
+export default Report;

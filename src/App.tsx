@@ -1,15 +1,14 @@
 import "./App.css";
-import Modal from "./components/Modal";
-import Sidebar from "./components/Side";
+import Home from "./components/Home";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   return (
     <>
-      <div className=" flex mt-[10px] ml-[30px]  h-[900px]">
+      <div className="flex flex-col mx-[14px] md:flex-row md:min-h-[900px]">
         <Sidebar />
-        <Modal />
+        <Home />
       </div>
-      {/* <Last /> */}
     </>
   );
 }

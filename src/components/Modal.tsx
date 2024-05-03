@@ -1,6 +1,4 @@
-import React from "react";
 import Middle from "./Middle";
-
 const Modal = () => {
   return (
     <div className="w-[80%] m-auto">

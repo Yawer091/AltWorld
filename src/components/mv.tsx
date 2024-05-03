@@ -264,7 +264,7 @@
 // };
 
 // // export default TextTicker;
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import { FaPlay } from "react-icons/fa";
 import { AiOutlineDoubleRight, AiOutlineDoubleLeft } from "react-icons/ai";
 import imgas from "../assets/imgas.jpg";

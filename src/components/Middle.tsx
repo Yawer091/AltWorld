@@ -1,5 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import imgas from "../assets/imgas.jpg";
+import {
+  Button,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure,
+} from "@chakra-ui/react";
 
 const data = [
   {
@@ -35,44 +46,61 @@ const data = [
 ];
 
 const Middle = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
-    <div className="w-[25%] px-[10px] my-[20px] bg-white rounded-[20px] ">
-      <div className="p-[10px]">
-        <div className="flex justify-between items-center my-[10px]">
-          <h2 className="text-[26px] font-bold">Sales BDE</h2>
-          <h2 className="text-green-500 text-[22px] font-semibold mr-[5px] ">
-            Active{" "}
-            <button className="bg-white p-[3px] rounded-[10px]">✏️</button>
-          </h2>
-        </div>
-        <div className="m-[0px]">
-          <div className="flex justify-between px-[10px] my-[5px]">
-            <p>Assignment Link</p>
-            <a href="#">skksks</a>
+    <div className="w-full md:w-[35%] mb-[12px] px-[10px] py-[4px] bg-white rounded-[20px]">
+      <div className="px-[10px]">
+        <div className="flex flex-col md:flex-row justify-between items-center my-[10px]">
+          <h2 className="text-[26px] font-bold mb-2 md:mb-0">Sales BDE</h2>
+          <div className="flex items-center">
+            <h2 className="text-green-500 text-[22px] font-semibold mr-2 md:mr-0">
+              Active
+            </h2>
+            <button
+              className="bg-white p-[3px] rounded-[10px]"
+              onClick={onOpen}
+            >
+              ✏️
+            </button>
           </div>
-          <div className="flex justify-between px-[10px]">
+        </div>
+        <div className="my-2 md:my-0">
+          <div className="flex justify-between  my-[5px]">
+            <p>Assignment Link</p>
+            <a href="#" className="text-blue-500">
+              skksks
+            </a>
+          </div>
+          <div className="flex justify-between ">
             <p>Assignment Hour</p>
             <p>3 hours</p>
           </div>
-          <div className="flex justify-between px-[10px] my-[5px]">
+          <div className="flex justify-between  my-[5px]">
             <p>Assignment Ends at</p>
             <p>11 March 2024</p>
           </div>
         </div>
       </div>
-      <div className="flex gap-[20px] p-[10px]">
-        <button className="shadow-lg bg-white p-[10px] rounded-[10px] font-semibold hover:shadow-md">
+      <div className="flex flex-col md:flex-row gap-[20px] p-[10px]">
+        <Button
+          className="shadow-lg bg-white p-[10px] rounded-[10px] font-semibold hover:shadow-md"
+          onClick={onOpen}
+        >
           🗃️ To Review
-        </button>
-        <button className="bg-none p-[10px] rounded-[10px] font-semibold hover:shadow-md">
+        </Button>
+        <Button
+          className="bg-none p-[10px] rounded-[10px] font-semibold  hover:shadow-md"
+          onClick={onOpen}
+        >
           📁 Shortlisted
-        </button>
+        </Button>
       </div>
-      <div className="flex justify-between w-[96%] p-[10px]">
+      <div className="flex justify-between w-full md:w-[96%] p-[10px]">
         <p className="text-gray-400 uppercase">Candidate</p>
         <p className="text-gray-400 uppercase">Score</p>
       </div>
-      <div className="bg-white rounded-[20px] ">
+      <div className="bg-white rounded-[20px]">
         {data.map((ele, ind) => (
           <Bake
             key={ind}
@@ -83,11 +111,25 @@ const Middle = () => {
           />
         ))}
       </div>
+
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Your Details</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody pb={6}>Only ADMIN can Update this</ModalBody>
+
+          <ModalFooter>
+            <Button colorScheme="blue" mr={3}>
+              Save
+            </Button>
+            <Button onClick={onClose}>Cancel</Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
     </div>
   );
 };
-
-export default Middle;
 
 interface BakeType {
   image: string;
@@ -97,8 +139,23 @@ interface BakeType {
 }
 
 function Bake(props: BakeType) {
+  const [currentProgress, setCurrentProgress] = useState(0);
+
+  useEffect(() => {
+    let counter = 0;
+    const timer = setInterval(() => {
+      setCurrentProgress((prev) => {
+        counter++;
+        return counter;
+      });
+      if (counter >= props.progress) clearInterval(timer);
+    }, 50); // Adjust the speed of animation by changing the interval duration
+
+    return () => clearInterval(timer);
+  }, [props.progress]);
+
   return (
-    <div className="flex justify-between items-center px-[20px] py-[10px]">
+    <div className="flex flex-col md:flex-row justify-between items-center px-[20px] py-[10px]">
       <div className="flex gap-[20px]">
         <img
           src={props.image}
@@ -111,111 +168,17 @@ function Bake(props: BakeType) {
           <p className="text-gray-400">{props.email}</p>
         </div>
       </div>
-      <h1
-        className={`font-semibold text-[22px] ${
-          props.progress > 60 ? "text-green-500" : "text-yellow-500"
-        }`}
-      >
-        {props.progress}%
-      </h1>
+      <div className="flex items-center">
+        <h1
+          className={`ml-[10px] font-semibold text-[22px] ${
+            currentProgress > 60 ? "text-green-500" : "text-yellow-500"
+          }`}
+        >
+          {currentProgress}%
+        </h1>
+      </div>
     </div>
   );
 }
-// import imgas from "../assets/imgas.jpg";
-// import { useState, useRef } from "react";
 
-// export default function Mx() {
-//   const [index, setIndex] = useState(0);
-//   const vidRef = useRef(null);
-//   const [isPlay, setIsPlay] = useState(false);
-//   const [thumbnail, setThumbnail] = useState(imgas);
-
-//   const myVid = [
-//     "https://personate-data-v2.s3.amazonaws.com/website+data+/website_videos+/home_page_video.mp4",
-//     "https://personate-data-v2.s3.amazonaws.com/website+data+/language_video/9824591c-8cc3-4528-a408-9abe32866a54.mp4",
-//   ];
-
-//   const handlePrev = () => {
-//     setIsPlay(false);
-//     if (index === 0) {
-//       setIndex(myVid.length - 1);
-//     } else {
-//       setIndex(index - 1);
-//     }
-//     handlePlay();
-//   };
-
-//   const handleNext = () => {
-//     setIsPlay(false);
-//     if (index === myVid.length - 1) {
-//       setIndex(0);
-//     } else {
-//       setIndex(index + 1);
-//     }
-//     handlePlay();
-//   };
-
-//   const handlePlay = () => {
-//     if (vidRef.current) {
-//       if (vidRef.current.paused) {
-//         vidRef.current.play();
-//         setIsPlay(true);
-//       } else {
-//         vidRef.current.pause();
-//         setIsPlay(false);
-//         captureThumbnail();
-//       }
-//     }
-//   };
-
-//   const captureThumbnail = () => {
-//     if (vidRef.current) {
-//       const canvas = document.createElement("canvas");
-//       canvas.width = vidRef.current.videoWidth;
-//       canvas.height = vidRef.current.videoHeight;
-//       const ctx = canvas.getContext("2d");
-//       ctx.drawImage(vidRef.current, 0, 0, canvas.width, canvas.height);
-//       const dataURL = canvas.toDataURL();
-//       setThumbnail(dataURL);
-//     }
-//   };
-
-//   return (
-//     <div className="flex flex-col items-center justify-center">
-//       <div className="w-full md:w-3/4 lg:w-2/3 relative">
-//         <video
-//           ref={vidRef}
-//           className="w-full h-full"
-//           src={myVid[index]}
-//         ></video>
-//         {!isPlay && thumbnail && (
-//           <img
-//             src={imgas}
-//             alt="Thumbnail"
-//             className="absolute inset-0 object-cover w-full h-full"
-//           />
-//         )}
-//         <button
-//           onClick={handlePlay}
-//           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white px-4 py-2 rounded-lg shadow-md"
-//         >
-//           {isPlay ? "Pause" : "Play"}
-//         </button>
-//       </div>
-//       <div className="mt-4 flex gap-4">
-//         <button
-//           onClick={handlePrev}
-//           className="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md"
-//         >
-//           Prev
-//         </button>
-//         <button
-//           onClick={handleNext}
-//           className="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md"
-//         >
-//           Next
-//         </button>
-//       </div>
-//     </div>
-//   );
-// }
+export default Middle;

@@ -1,7 +1,7 @@
 import "./App.css";
-import Middle from "./components/Middle";
-import SingleUser from "./components/mv";
-import Side from "./components/Side";
+import Modal from "./components/Modal";
+import Sidebar from "./components/Side";
+
 // import Vcard from "./components/Vcard";
 
 // const data = [
@@ -24,11 +24,9 @@ import Side from "./components/Side";
 // ];
 function App() {
   return (
-    <div className=" flex bg-slate-100 h-[670px] gap-30px">
-      <Side />
-      <Middle />
-      {/* <Vcard data={data} /> */}
-      <SingleUser />
+    <div className="flex mt-[10px] ml-[30px] ">
+      <Sidebar />
+      <Modal />
     </div>
   );
 }

@@ -56,25 +56,7 @@ const Vcard = (props: PropsType) => {
             </button>
           </div>
         </article>
-        <article className=" w-[45%]">
-          {/* <div>
-            <img
-              src="https://buffer.com/library/content/images/2023/10/free-images.jpg"
-              alt=""
-              width="500px"
-              height="900px"
-            />
-            <div className="flex justify-between">
-              <button>✖️</button>
-              <div>
-                <p>tell em </p>
-                <p>Question 1/11</p>
-              </div>
-              <button>✖️</button>
-            </div>
-          </div> */}
-          {/* <Mx /> */}
-        </article>
+        <article className=" w-[45%]"></article>
       </section>
     </>
   );

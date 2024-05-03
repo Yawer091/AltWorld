@@ -17,10 +17,10 @@ import imgas from "../assets/imgas.jpg";
 export default function SingleUser({
   name = "jhon",
   email = "jhon",
-  score = 22,
+  score = 75,
   behavioural = 2,
-  communication = 222,
-  situation_handling = 222,
+  communication = 75,
+  situation_handling = 75,
   about = "pskd",
   experience = "dodod",
   hobbies = "kdkd",

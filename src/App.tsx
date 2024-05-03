@@ -1,6 +1,6 @@
 import "./App.css";
 import Middle from "./components/Middle";
-// import SingleUser from "./components/mv";
+import SingleUser from "./components/mv";
 import Side from "./components/Side";
 // import Vcard from "./components/Vcard";
 
@@ -28,7 +28,7 @@ function App() {
       <Side />
       <Middle />
       {/* <Vcard data={data} /> */}
-      {/* <SingleUser /> */}
+      <SingleUser />
     </div>
   );
 }

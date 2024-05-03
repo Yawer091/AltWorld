@@ -68,7 +68,10 @@ const Report = () => {
         <div className="my-2 md:my-0">
           <div className="flex justify-between my-[5px]">
             <p>Assignment Link</p>
-            <a href="#" className="text-blue-600 underline font-semibold">
+            <a
+              href="https://alt-world-steel.vercel.app/"
+              className="text-blue-600 underline font-semibold"
+            >
               https://tiny.url/asknandna
             </a>
           </div>

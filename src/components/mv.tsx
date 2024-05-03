@@ -364,7 +364,7 @@ const SingleUser = ({
               <div className="flex items-center gap-4">
                 <div className="w-32 h-2 bg-gray-200 rounded-xl relative">
                   <div
-                    style={{ width: `${behavioural * 10}%` }}
+                    // style={{ width: `${behavioural * 10}%` }}
                     className={`absolute h-2 rounded-lg ${
                       behavioural > 6 ? "bg-green-500" : "bg-yellow-500"
                     }`}
@@ -386,7 +386,7 @@ const SingleUser = ({
               <div className="flex items-center gap-4">
                 <div className="w-32 h-2 bg-gray-200 rounded-xl relative">
                   <div
-                    style={{ width: `${communication * 10}%` }}
+                    // style={{ width: `${communication * 10}%` }}
                     className={`absolute h-2 rounded-lg ${
                       communication > 6 ? "bg-green-500" : "bg-yellow-500"
                     }`}
@@ -408,7 +408,7 @@ const SingleUser = ({
               <div className="flex items-center gap-4">
                 <div className="w-32 h-2 bg-gray-200 rounded-xl relative">
                   <div
-                    style={{ width: `${situation_handling * 10}%` }}
+                    // style={{ width: `${situation_handling * 10}%` }}
                     className={`absolute h-2 rounded-lg ${
                       situation_handling > 6 ? "bg-green-500" : "bg-yellow-500"
                     }`}
@@ -463,6 +463,7 @@ const SingleUser = ({
 
           {!isPlay && (
             <button
+              title="play"
               onClick={handlePlay}
               className="flex items-center z-50 justify-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full absolute inset-0 text-primary bg-white text-[19px] h-[50px] w-[50px]"
             >

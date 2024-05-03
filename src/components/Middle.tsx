@@ -144,7 +144,7 @@ function Bake(props: BakeType) {
   useEffect(() => {
     let counter = 0;
     const timer = setInterval(() => {
-      setCurrentProgress((prev) => {
+      setCurrentProgress(() => {
         counter++;
         return counter;
       });

@@ -1,30 +1,55 @@
-# React + TypeScript + Vite
+# AltWorld
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introduction
+A Clone of UI https://files.altworld.in/assignment/AssignmentScreen.png
+  
+## Project Type
+Frontend 
 
-Currently, two official plugins are available:
+## Deplolyed App
+Frontend: https://alt-world-qfxkys1yx-yawer-s-projects.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Toggle Functionalities
+- Toast notification
+- Video Player
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+
+## Installation & Getting started
+Detailed instructions on how to install, configure, and get the project running. For BE/FS projects, guide the reviewer how to check mongodb schema etc.
+
+```bash
+git clone https://github.com/Yawer091/AltWorld.git
+cd AltWorld
+npm install
+npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## ScreenShots
+
+### sidebar
+![Screenshot 2024-05-03 231219](https://github.com/Yawer091/AltWorld/assets/151438698/81ed74f9-9d08-4b2b-9467-566dae0d9f57)
+
+### ProgressCard
+![Screenshot 2024-05-03 231300](https://github.com/Yawer091/AltWorld/assets/151438698/2a41dbcd-972e-48a8-a539-e232c0c43d2d)
+
+
+### DetailsCard
+![Screenshot 2024-05-03 231249](https://github.com/Yawer091/AltWorld/assets/151438698/2d3cf3c6-03fb-4a0a-b8dc-17278a14bbfb)
+
+### VideoCard
+![Screenshot 2024-05-03 231233](https://github.com/Yawer091/AltWorld/assets/151438698/34a042ac-639a-4efc-87d8-5eff40b9ad9a)
+
+### FullScreen
+![Screenshot 2024-05-03 231204](https://github.com/Yawer091/AltWorld/assets/151438698/b2ffba0a-9465-4586-8acc-663aa3794110)
+
+
+
+## Technology Stack
+- React.js
+- TypeScript
+- ChakaraUI
+- TailwindCSS

@@ -58,7 +58,7 @@ const Middle = () => {
               Active
             </h2>
             <button
-              className="bg-white p-[3px] rounded-[10px]"
+              className="bg-white p-[3px] ml-[3px] rounded-[10px]"
               onClick={onOpen}
             >
               ✏️
@@ -149,7 +149,7 @@ function Bake(props: BakeType) {
         return counter;
       });
       if (counter >= props.progress) clearInterval(timer);
-    }, 50); // Adjust the speed of animation by changing the interval duration
+    }, 50);
 
     return () => clearInterval(timer);
   }, [props.progress]);

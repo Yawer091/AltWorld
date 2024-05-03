@@ -1,15 +1,7 @@
-// import { useState } from "react";
 import Topv from "./Topv";
-// import Mx from "./Mx";
-
 interface PropsType {
   data: { name: string; des: string }[];
 }
-// const img = [
-//   "https://buffer.com/library/content/images/2023/10/free-images.jpg",
-//   "https://avatars.mds.yandex.net/i?id=138099e213f33ee9323833ed658d92f1214cf496-10289922-images-thumbs&n=13",
-//   "https://avatars.mds.yandex.net/i?id=95ed82b5bd3707ad06da19b6a156ed53e40f643c-10093836-images-thumbs&n=13",
-// ];
 
 const Vcard = (props: PropsType) => {
   return (

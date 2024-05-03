@@ -1,5 +1,4 @@
 import "./App.css";
-import Last from "./components/Last";
 import Modal from "./components/Modal";
 import Sidebar from "./components/Side";
 

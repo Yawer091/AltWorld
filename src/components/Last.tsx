@@ -4,18 +4,18 @@ import { AiOutlineDoubleRight, AiOutlineDoubleLeft } from "react-icons/ai";
 import Vcard from "./Vcard";
 // import imgas from "../assets/imgas.jpg";
 
-interface UserDataType {
-  name: string;
-  email: string;
-  score: number;
-  behavioural: number;
-  communication: number;
-  situation_handling: number;
-  about: string;
-  experience: string;
-  hobbies: string;
-  introduction: string;
-}
+// interface UserDataType {
+//   name: string;
+//   email: string;
+//   score: number;
+//   behavioural: number;
+//   communication: number;
+//   situation_handling: number;
+//   about: string;
+//   experience: string;
+//   hobbies: string;
+//   introduction: string;
+// }
 
 const Last = () => {
   const [index, setIndex] = useState(0);

@@ -111,6 +111,7 @@ const Report = () => {
             name={ele.name}
             email={ele.email}
             progress={ele.progress}
+            width={45}
           />
         ))}
       </div>

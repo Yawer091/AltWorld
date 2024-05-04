@@ -10,7 +10,7 @@ interface PropsType {
 const Topv = (props: PropsType) => {
   return (
     <div className="flex items-center justify-between gap-4 my-[10px]">
-      <p className="text-[14px] w-[30%] font-semibold">{props.tag}</p>
+      <p className="text-[12px] w-[35%] font-semibold">{props.tag}</p>
       <Progress
         flex="1"
         height="10px"
@@ -20,7 +20,7 @@ const Topv = (props: PropsType) => {
         bg="gray.300"
       />
       <p
-        className={`text-[14px] w-[10%] ${
+        className={`text-[14px]  ${
           props.num > 6 ? "text-green-400" : "text-yellow-400"
         }`}
       >

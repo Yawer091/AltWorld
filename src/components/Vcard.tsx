@@ -12,7 +12,7 @@ const Vcard = (props: PropsType) => {
             <div className="flex justify-between items-center p-[10px]">
               <img
                 src="https://buffer.com/library/content/images/2023/10/free-images.jpg"
-                width="42px"
+                width="44px"
                 alt=""
                 className="rounded-[10px] h-[42px]"
               />

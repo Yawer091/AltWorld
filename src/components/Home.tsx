@@ -1,5 +1,6 @@
 import SingleUser from "./SingleUser";
 import Report from "./Report";
+
 const Home = () => {
   return (
     <div className="w-full md:w-[90%] mx-auto">

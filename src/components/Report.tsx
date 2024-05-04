@@ -139,6 +139,7 @@ interface BakeType {
   name: string;
   email: string;
   progress: number;
+  width: number | 45;
 }
 
 export function Bake(props: BakeType) {
@@ -158,11 +159,11 @@ export function Bake(props: BakeType) {
   }, [props.progress]);
 
   return (
-    <div className="flex flex-col md:flex-row justify-between items-center px-[20px] py-[10px]">
+    <div className="flex flex-col md:flex-row justify-between items-center pr-[20px] py-[10px]">
       <div className="flex gap-[20px]">
         <img
           src={props.image}
-          width="45px"
+          width={`${props.width || 45}px`}
           alt=""
           className="rounded-[10px] "
         />

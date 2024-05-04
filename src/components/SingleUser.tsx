@@ -65,12 +65,13 @@ const SingleUser = () => {
     <div className="w-full bg-white shadow-lg rounded-xl flex flex-col md:flex-row gap-4">
       <div className="md:w-1/2 flex flex-col">
         <div className="p-[16px]">
-          <div>
+          <div className="">
             <Bake
               image={data[0].image}
               name={data[0].name}
               email={data[0].email}
               progress={data[0].progress}
+              width={62}
             />
           </div>
           <div className="mt-[20px] ">
@@ -87,26 +88,36 @@ const SingleUser = () => {
           <div className="flex flex-col gap-4 mt-4">
             <div>
               <h3 className="font-bold text-lg text-gray-900">About</h3>
-              <p className="text-sm text-gray-600">
-                Some information about John...
+              <p className="text-[13px] text-gray-600">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. the
+                thread experience
               </p>
             </div>
             <div>
               <h3 className="font-bold text-lg text-gray-900">Experience</h3>
-              <p className="text-sm text-gray-600">John's experience...</p>
+              <p className="text-[13px] text-gray-600">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. the
+                thread experience
+              </p>
             </div>
             <div>
               <h3 className="font-bold text-lg text-gray-900">Hobbies</h3>
-              <p className="text-sm text-gray-600">John's hobbies...</p>
+              <p className="text-[13px] text-gray-600">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. the
+                thread experience
+              </p>
             </div>
             <div>
               <h3 className="font-bold text-lg text-gray-900">Introduction</h3>
-              <p className="text-sm text-gray-600">John's introduction...</p>
+              <p className="text-[13px] text-gray-600">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. the
+                thread experience
+              </p>
             </div>
           </div>
         </div>
         <div className="mb-5 text-center">
-          <button className="bg-[#1EC3B3] text-white w-[70%] py-2 rounded-lg font-medium">
+          <button className="bg-[#1EC3B3] text-white w-[70%] py-2 rounded-lg font-medium hover:bg-teal-500">
             SHORTLIST
           </button>
         </div>
